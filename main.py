@@ -60,8 +60,11 @@ if __name__ == '__main__':
         ' Revisit policy search rate should be in [0,1]'
 
     if args.opr == 'train':
-        ray.init(num_gpus=args.num_gpus, num_cpus=args.num_cpus,
-                 object_store_memory=150 * 1024 * 1024 * 1024)
+        ray.init(
+            num_gpus=args.num_gpus,
+            num_cpus=args.num_cpus,
+            # object_store_memory=150 * 1024 * 1024 * 1024)
+        )
     else:
         ray.init()
 

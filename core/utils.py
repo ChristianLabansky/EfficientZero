@@ -9,7 +9,8 @@ import logging
 import numpy as np
 
 from scipy.stats import entropy
-from baselines.common.atari_wrappers import NoopResetEnv, TimeLimit
+from baselines.common.atari_wrappers import NoopResetEnv #, TimeLimit
+from gym.wrappers.time_limit import TimeLimit
 
 
 class LinearSchedule(object):

@@ -143,7 +143,7 @@ class AtariConfig(BaseConfig):
 
         if self.episode_life and not test:
             env = EpisodicLifeEnv(env)
-        env = WarpFrame(env, width=self.obs_shape[1], height=self.obs_shape[2], grayscale=self.gray_scale)
+        env = WarpFrame(env)#, width=self.obs_shape[1], height=self.obs_shape[2], grayscale=self.gray_scale)
 
         if seed is not None:
             env.seed(seed)
